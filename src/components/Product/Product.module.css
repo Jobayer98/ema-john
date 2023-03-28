@@ -1,0 +1,10 @@
+.btn_cart {
+  position: absolute;
+  width: 100%;
+  background-color: #ffe0b3;
+  bottom: 0;
+  left: 0;
+
+  border-radius: 0 0 8px 8px;
+  padding: 6px 0;
+}

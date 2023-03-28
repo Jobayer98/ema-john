@@ -3,7 +3,7 @@
   grid-template-columns: repeat(12, 1fr);
   justify-content: center;
   align-items: start;
-  margin-top: 64px;
+  margin: 64px 0;
 }
 
 .banner_content {

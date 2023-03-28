@@ -1,0 +1,9 @@
+.products_container {
+  margin: 0 72px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  justify-items: center;
+  row-gap: 32px;
+}
