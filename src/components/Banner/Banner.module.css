@@ -1,21 +1,19 @@
 .banner_container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-
   justify-content: center;
-  align-items: center;
-
+  align-items: start;
   margin-top: 64px;
 }
 
 .banner_content {
-  grid-column: 3/8;
+  grid-column: 2/8;
 
+  margin-top: 150px;
   padding: 16px 0;
-  margin-right: 64px;
 }
 .title {
-  font-size: 42px;
+  font-size: 52px;
   font-weight: 700;
   color: #1c2b35;
 }
@@ -26,12 +24,54 @@
 }
 
 .img_container {
-  grid-column: 8 / 11;
+  grid-column: 8 / 12;
   place-self: center;
 }
 
 .img {
-  height: 420px;
+  height: 520px;
+
   border-radius: 8px;
   box-shadow: -10px 10px 0 0 #ffe0b3;
+}
+
+.btn_shop {
+  color: #1c2b35;
+  background-color: #ff9900;
+  padding: 6px 16px;
+  border-radius: 4px;
+  font-size: 20px;
+  font-weight: 600;
+
+  margin-top: 52px;
+}
+
+@media screen and (max-width: 768px) {
+  .banner_container {
+    display: none;
+  }
+
+  .title {
+    width: 340px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .banner_content {
+    margin-left: 0px;
+    grid-column: 2 /7;
+  }
+
+  .title {
+    font-size: 42px;
+    width: 340px;
+  }
+
+  .para {
+    max-width: 70%;
+  }
+
+  .img_container {
+    grid-column: 7 / 12;
+  }
 }
