@@ -1,7 +1,13 @@
-import "./App.css";
+import { Fragment } from "react";
+
+import Header from "./pages/Header";
 
 function App() {
-  return <div>App</div>;
+  return (
+    <Fragment>
+      <Header />
+    </Fragment>
+  );
 }
 
 export default App;
