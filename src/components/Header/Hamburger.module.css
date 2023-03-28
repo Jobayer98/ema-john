@@ -1,0 +1,38 @@
+.first,
+.second,
+.third {
+  color: #fff;
+  width: 42px;
+  display: block;
+
+  border-top: 4px solid #fff;
+}
+
+.hideSecond {
+  display: none;
+}
+
+.firstCross {
+  color: #fff;
+  width: 42px;
+  display: block;
+
+  border-top: 4px solid #fff;
+  transform: rotate(45deg) translateX(9px);
+}
+.thirdCross {
+  color: #fff;
+  width: 42px;
+  display: block;
+
+  border-top: 4px solid #fff;
+  transform: rotate(-45deg) translateX(8px);
+}
+
+.first,
+.second,
+.third,
+.firstCross,
+.thirdCross {
+  transition: transform 200ms ease-in-out;
+}

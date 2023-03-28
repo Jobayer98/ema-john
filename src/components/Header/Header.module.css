@@ -1,0 +1,32 @@
+.navBar {
+  padding: 16px 72px;
+  background-color: #1c2b35;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navList a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 12px;
+}
+
+.hamburger {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .navList {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    cursor: pointer;
+  }
+}
