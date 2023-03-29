@@ -1,9 +1,9 @@
 import { Fragment } from "react";
 
-import "./App.css";
 import Header from "./components/Header/Header";
 import Banner from "./components/Banner/Banner";
 import Products from "./components/Product/Products";
+import Cart from "./components/Cart/Cart";
 
 function App() {
   return (
@@ -11,6 +11,7 @@ function App() {
       <Header />
       <Banner />
       <Products />
+      <Cart />
     </Fragment>
   );
 }

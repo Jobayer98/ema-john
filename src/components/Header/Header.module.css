@@ -26,8 +26,8 @@
 }
 
 .quantity {
-  color: #fff;
-
+  color: #ff9900;
+  font-weight: bold;
   position: absolute;
   right: 6px;
   top: -16px;
