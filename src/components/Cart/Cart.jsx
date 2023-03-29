@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { BiTrash, BiCreditCard } from "react-icons/bi";
 
 import Figure from "../UI/Figure";
@@ -7,7 +7,7 @@ import Card from "../UI/Card";
 import Button from "../UI/Button";
 import classes from "./Cart.module.css";
 
-const Cart = ({ addedProduct, value, onClearCart }) => {
+const Cart = ({ addedProduct, value, onClearCart, onRemoveProduct }) => {
   const [item, setItem] = useState(value);
   const [cart, setCart] = useState(addedProduct);
   let totalPrice = 0;
@@ -19,10 +19,20 @@ const Cart = ({ addedProduct, value, onClearCart }) => {
   const tax = (totalPrice * 5) / 100;
   const grandTotal = (totalPrice + totalShipping + tax).toFixed(2);
 
+  useEffect(() => {
+    onRemoveProduct(item);
+  }, [item]);
+
   const handleClearCart = () => {
     setCart([]);
     setItem(0);
     onClearCart();
+  };
+
+  const handleDeleteProduct = (id) => {
+    const products = cart.filter((pd) => pd.id !== id);
+    setCart(products);
+    setItem((prevItem) => prevItem - 1);
   };
   return (
     <div className={classes.cart_container}>
@@ -44,7 +54,10 @@ const Cart = ({ addedProduct, value, onClearCart }) => {
                 </p>
               </ProductDetails>
               <div className={classes.icon_container}>
-                <BiTrash className={classes.delete} />
+                <BiTrash
+                  onClick={() => handleDeleteProduct(product.id)}
+                  className={classes.delete}
+                />
               </div>
             </Card>
           );

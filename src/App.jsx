@@ -17,6 +17,10 @@ function App() {
   const clearCart = () => {
     setValue(0);
   };
+  const removeProductFromCart = (item) => {
+    setValue(item);
+  };
+
   return (
     <BrowserRouter>
       <Header value={value} />
@@ -25,7 +29,12 @@ function App() {
         <Route
           path="/cart"
           element={
-            <Cart addedProduct={cart} value={value} onClearCart={clearCart} />
+            <Cart
+              addedProduct={cart}
+              value={value}
+              onClearCart={clearCart}
+              onRemoveProduct={removeProductFromCart}
+            />
           }
         />
       </Routes>
