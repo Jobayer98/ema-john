@@ -1,6 +1,5 @@
 import React from "react";
-
-import { FaShoppingCart } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 
 import Hamburger from "./Hamburger";
 import logo from "../../assets/Logo.svg";
@@ -12,7 +11,9 @@ const Header = () => {
     <header>
       <nav className={classes.navBar}>
         {/* brand logo */}
-        <img src={logo} alt="ema-jhon-logo" />
+        <NavLink to="/">
+          <img src={logo} alt="ema-jhon-logo" />
+        </NavLink>
         {/* nav list */}
         <div className={classes.nav_container}>
           <NavList className={classes.navList} />
