@@ -1,9 +1,24 @@
 .products_container {
-  margin: 0 72px;
+  margin: 64px 96px;
 
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   justify-content: center;
   justify-items: center;
-  row-gap: 32px;
+  gap: 32px;
+}
+
+@media screen and (max-width: 576px) {
+  .products_container {
+    margin: 32px 1px;
+    grid-template-columns: auto;
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 1023px) {
+  .products_container {
+    margin: 64px 0;
+    grid-template-columns: auto auto;
+    column-gap: 32px;
+  }
 }
