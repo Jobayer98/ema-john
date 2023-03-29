@@ -6,7 +6,7 @@ import logo from "../../assets/Logo.svg";
 import classes from "./Header.module.css";
 import NavList from "./NavBar";
 
-const Header = () => {
+const Header = ({ value }) => {
   return (
     <header>
       <nav className={classes.navBar}>
@@ -16,7 +16,7 @@ const Header = () => {
         </NavLink>
         {/* nav list */}
         <div className={classes.nav_container}>
-          <NavList className={classes.navList} />
+          <NavList className={classes.navList} value={value} />
           <Hamburger className={classes.hamburger} />
         </div>
       </nav>

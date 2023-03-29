@@ -6,7 +6,10 @@ import ProductDetails from "../UI/ProductDetails";
 
 import classes from "./Product.module.css";
 
-const Product = ({ product }) => {
+const Product = ({ product, onAddProuct }) => {
+  const handleAddToCart = () => {
+    onAddProuct(product);
+  };
   return (
     <Card>
       <Figure>
@@ -20,7 +23,7 @@ const Product = ({ product }) => {
           <p>Rating: {product.ratings} star</p>
         </div>
       </ProductDetails>
-      <Button className={classes.btn_cart}>
+      <Button onClick={handleAddToCart} className={classes.btn_cart}>
         Add to Cart
         <FaShoppingCart />
       </Button>

@@ -4,7 +4,7 @@ import fetchData from "../../../public/fetchData";
 import Product from "./Product";
 import classes from "./Products.module.css";
 
-const Products = () => {
+const Products = ({ onAddProuct }) => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -15,7 +15,7 @@ const Products = () => {
   return (
     <div className={classes.products_container}>
       {products.map((product) => (
-        <Product key={product.id} product={product} />
+        <Product key={product.id} product={product} onAddProuct={onAddProuct} />
       ))}
     </div>
   );

@@ -3,7 +3,7 @@ import { FaShoppingCart } from "react-icons/fa";
 
 import classes from "./NavBar.module.css";
 
-const NavList = ({ className }) => {
+const NavList = ({ className, value }) => {
   return (
     <>
       <div className={className}>
@@ -13,7 +13,7 @@ const NavList = ({ className }) => {
         <NavLink to="/login">Login</NavLink>
       </div>
       <NavLink to="/cart">
-        <label className={classes.quantity}>0</label>
+        <label className={classes.quantity}>{value}</label>
         <FaShoppingCart className={classes.shopping_basket} />
       </NavLink>
     </>
