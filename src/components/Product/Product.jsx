@@ -1,3 +1,4 @@
+import { FaShoppingCart } from "react-icons/fa";
 import Button from "../UI/Button";
 import Card from "../UI/Card";
 import Figure from "../UI/Figure";
@@ -19,7 +20,10 @@ const Product = ({ product }) => {
           <p>Rating: {product.ratings} star</p>
         </div>
       </ProductDetails>
-      <Button className={classes.btn_cart}>Add to Cart</Button>
+      <Button className={classes.btn_cart}>
+        Add to Cart
+        <FaShoppingCart />
+      </Button>
     </Card>
   );
 };
