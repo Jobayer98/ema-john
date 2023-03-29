@@ -2,8 +2,9 @@
   color: #ff9900;
   font-weight: bold;
   position: absolute;
-  right: 6px;
-  top: -16px;
+
+  top: 6px;
+  transform: translateX(10px);
 }
 
 .shopping_basket {

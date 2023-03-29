@@ -5,14 +5,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .nav_container {
   display: flex;
   justify-content: space-between;
   gap: 32px;
-
-  position: relative;
 }
 
 .navList a {
