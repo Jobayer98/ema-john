@@ -25,20 +25,6 @@
   display: none;
 }
 
-.quantity {
-  color: #ff9900;
-  font-weight: bold;
-  position: absolute;
-  right: 6px;
-  top: -16px;
-}
-
-.shopping_basket {
-  color: #fff;
-  height: 24px;
-  width: 24px;
-}
-
 @media screen and (max-width: 768px) {
   .navList {
     display: none;

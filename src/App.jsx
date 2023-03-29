@@ -1,18 +1,20 @@
-import { Fragment } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Header from "./components/Header/Header";
-import Banner from "./components/Banner/Banner";
-import Products from "./components/Product/Products";
 import Cart from "./components/Cart/Cart";
+import Home from "./pages/Home";
+
+// sfc
 
 function App() {
   return (
-    <Fragment>
+    <BrowserRouter>
       <Header />
-      <Banner />
-      <Products />
-      <Cart />
-    </Fragment>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/cart" element={<Cart />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
