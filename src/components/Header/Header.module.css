@@ -7,6 +7,14 @@
   align-items: center;
 }
 
+.nav_container {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+
+  position: relative;
+}
+
 .navList a {
   color: #fff;
   text-decoration: none;
@@ -15,6 +23,20 @@
 
 .hamburger {
   display: none;
+}
+
+.quantity {
+  color: #fff;
+
+  position: absolute;
+  right: 6px;
+  top: -16px;
+}
+
+.shopping_basket {
+  color: #fff;
+  height: 24px;
+  width: 24px;
 }
 
 @media screen and (max-width: 768px) {
